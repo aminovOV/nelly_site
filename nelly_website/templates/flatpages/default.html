@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="RU">
+	<head>
+		<meta charset="UTF-8">
+		<title>{{ flatpage.title }}</title>
+        {% load static %}
+        <link href="{% static 'style.css' %}" rel="stylesheet" />
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+		<link rel="icon" type="image" href="favicon.ico">
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<div class="site-container">
+			<header class="header">
+				<div сlass="header-row-1">
+					<h1>
+						<a href="https://zoofotoufa.github.io/zoofotoufa/index.html" target="_self">НЕЛЛИ РАХМАТУЛЛИНА</a>
+					</h1>
+				</div>
+				<div class="header-row-2-3">
+					<p class="header-paragraph">
+						<a href="https://zoofotoufa.github.io/zoofotoufa/index.html" target="_self">ФОТОГРАФИЯ <br> домашних животных</a>
+					</p>
+				</div>
+				<div class="menu">
+					<nav class="nav">
+						<ul class="ul">
+							<li class="menu-dogs">
+								<p class="menu-item">
+									<a href="dogs.html" target="_self">Собаки</a>
+								</p>
+							</li>
+							<li class="menu-cats">
+								<p class="menu-item">
+									<a href="cats.html" target="_self">Кошки</a>
+								</p>
+							</li>
+							<li class="menu-otheranimals">
+								<p class="menu-item">
+									<a href="otheranimals.html" target="_self">Другие животные</a>
+								</p>
+							</li>
+							<li class="menu-about">
+								<p class="menu-item">
+									<a href="about.html" target="_self">Про фотосессии</a>
+								</p>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+				{% block content %}
+				{{ flatpage.content }}
+				{% endblock content %}
+			<footer>
+				<div class="footer-block">
+					<p class="signature">© 2023 Нелли Рахматуллина</p>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
